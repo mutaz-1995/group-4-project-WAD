@@ -1,0 +1,130 @@
+{
+	"info": {
+		"_postman_id": "3926a60b-a4f7-42a5-98ec-c44eee7d884b",
+		"name": "Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39102954"
+	},
+	"item": [
+		{
+			"name": "Get all Contestants",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Get a specific contestant by ID",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "Creating a new contestant",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Contestant 5\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/votes/contestant",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"votes",
+						"contestant"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create a new vote",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"contestantId\": \"c1\",\r\n  \"voterName\": \"Daniel Khan\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/api/votes/vote",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"votes",
+						"vote"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a vote",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/votes/vote/cb2e576b-03a6-4a77-ba3e-aecaf4288704",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"votes",
+						"vote",
+						"cb2e576b-03a6-4a77-ba3e-aecaf4288704"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get the vote count for a contestant",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/api/votes/c1/votes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"votes",
+						"c1",
+						"votes"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
